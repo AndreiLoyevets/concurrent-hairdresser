@@ -36,7 +36,7 @@ public class Room<E> implements Buffer<E> {
 
         try {
             if (isFull()) {
-                System.out.println("Client " + item + " came to the queue");
+                System.out.println("Клієнт №" + item + " очікує в черзі на вулиці");
             }
 
             while (isFull()) {
@@ -46,7 +46,7 @@ public class Room<E> implements Buffer<E> {
             int pos = (newest + 1) % chairs.length;
             chairs[pos] = item;
             newest = pos;
-            System.out.println("Client " + item + " entered the room");
+            System.out.println("Клієнт №" + item + " в кімнаті для очікування");
 
             notEmpty.signalAll();
 

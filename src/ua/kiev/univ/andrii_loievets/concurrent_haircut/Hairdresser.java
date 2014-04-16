@@ -18,9 +18,9 @@ public class Hairdresser implements Callable<Object>{
     @SuppressWarnings("SleepWhileInLoop")
     public Object call() throws Exception {
         while (!Thread.currentThread().isInterrupted()) {
-            System.out.println("Waiting for the next client...");
+            System.out.println("Очікую нового клієнта...");
             Integer client = room.get();
-            System.out.println("Working on client " + client + "...");
+            System.out.println("Працюю над клієнтом  №" + client + "...");
             Thread.sleep((long) (Math.random() * 1000));
         }
         
