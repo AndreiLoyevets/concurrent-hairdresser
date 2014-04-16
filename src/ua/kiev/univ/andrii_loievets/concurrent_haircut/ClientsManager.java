@@ -3,8 +3,9 @@ package ua.kiev.univ.andrii_loievets.concurrent_haircut;
 import java.util.concurrent.Callable;
 
 /**
- *
- * @author Tourist
+ * This class randomly generates new clients and puts them into the outer queue.
+ * @author Andrii Loievets
+ * @version 1.0 16-April-2014
  */
 public class ClientsManager implements Callable<Object>{
     private static final int CLIENTS_INTENSITY = 100;
@@ -23,7 +24,7 @@ public class ClientsManager implements Callable<Object>{
             outQueue.put(clientID++);
             Thread.sleep((long) (Math.random() * CLIENTS_INTENSITY));
         }
-        return new Object();
+        return null;
     }
     
 }

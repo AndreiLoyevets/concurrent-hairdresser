@@ -3,7 +3,8 @@ package ua.kiev.univ.andrii_loievets.concurrent_haircut;
 import java.util.concurrent.Callable;
 
 /**
- *
+ * Hairdresser waits for the next client. takes the client from the room and
+ * makes haircuts.
  * @author Andrii Loievets
  * @version 1.0 16-April-2014
  */
@@ -24,6 +25,6 @@ public class Hairdresser implements Callable<Object>{
             Thread.sleep((long) (Math.random() * 1000));
         }
         
-        return new Object();
+        return null;
     }
 }

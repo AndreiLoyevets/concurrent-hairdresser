@@ -8,8 +8,10 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- *
- * @author Tourist
+ * Accepts the clients and puts them in the queue. Tries to move the clients
+ * into the room  if there is available place.
+ * @author Andrii Loievets
+ * @version 1.0 16-April-2014
  * @param <E>
  */
 public class OuterQueue<E> implements Buffer<E>, Callable<Object> {
@@ -69,7 +71,6 @@ public class OuterQueue<E> implements Buffer<E>, Callable<Object> {
             notEmpty.await();
             
             // new client came to the queue
-            
             try {
 
                 // get the client

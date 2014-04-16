@@ -5,7 +5,9 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * RingBuffer implementation.
+ * Room buffer implementation is on the basis of the RingBuffer. Accepts new
+ * clients if there is available place and notifies the hairdresser that the
+ * new client appeared.
  *
  * @author Andrii Loievets
  * @version 1.0 16-April-2014
